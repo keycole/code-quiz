@@ -8,7 +8,7 @@ var score = 0;
 var time = 0;
 
 //
-var highScore = document.getElementById("high-score"); // on click reveal high scores screen
+var scoreLink = document.getElementById("score-link"); // on click reveal high scores screen
 
 var startContainer = document.getElementById("main-container");
 
@@ -52,7 +52,7 @@ var countdownClock = setInterval(function() {
   }, 1000);
 
 //Navigate to high score page
-highScore.onclick = fuction(){
+scoreLink.onclick = fuction(){
     scoreBoard.style.display = "block";
     startContainer.style.display = "none";
     questionContainer.style.display = "none";
