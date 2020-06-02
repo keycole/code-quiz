@@ -1,0 +1,73 @@
+/* Container Background Image */
+/* #main-container {
+    background-image: url("../images/greg-rosenke-syZhH19b1Z8-unsplash.jpg");
+    background-size: cover;
+    height: 100%;
+} */
+
+/* Universal Styles */
+h3 {
+    font-family: 'Titan One', cursive;
+}
+
+h5 {
+    font-family: 'Titan One', cursive;
+}
+
+li {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(204, 68, 74);
+    min-width: 100%;
+}
+
+/* Question Container CSS */
+#question-container {
+    display: none;
+    width: 90%;
+}
+
+#question-container button {
+    text-align: left;
+}
+
+#card-footer {
+    font-display: none;
+    border-top:  rgb(204, 68, 74);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Quiz Results CSS */
+#quiz-results {
+    display: none;
+}
+
+/* High Score Screen CSS */
+#high-scores {
+    display: none;
+}
+
+#score-buttons {
+    padding: 20px;
+}
