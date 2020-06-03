@@ -41,6 +41,12 @@ footer {
     min-width: 100%;
 }
 
+/* Start Container CSS */
+/*Used for ReadMe screenshots only*/
+/*#quiz-container {
+    display: none;
+}*/
+
 /* Question Container CSS */
 #question-container {
     display: none;
@@ -52,10 +58,8 @@ footer {
 }
 
 #card-footer {
-    font-display: none;
-    border-top:  rgb(204, 68, 74);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: none;
+    padding: 10px;
 }
 
 /* Quiz Results CSS */
