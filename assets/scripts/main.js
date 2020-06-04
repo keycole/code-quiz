@@ -27,22 +27,21 @@ var backButton = document.getElementById("back-button");
 var clear = document.getElementById("clear-scores");
 
 // Time 
-var time;
+var time = 10;
 
 //Start quiz
+start.addEventListener("click", startQuiz);
+console.log(event);
+
 function startQuiz() {
     var timeInterval = setInterval(function () {
-        time = 75;
-        while (time > 0) {
-            time--;
-            timer.textContent = time;
-            if (time === 0) {
+        timer.textContent = time;
+        time--;
+            if (time === -1) { //unsure why this needs to be -1, but it is the only way I get to display 1 before clearInterval
                 clearInterval(timeInterval);
+                time = 10;
             }
-            return time;
-        } 
     }, 1000);;
 };
 
-start.addEventListener("click", startQuiz);
-console.log(event);
+//Hide start screen
