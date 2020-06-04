@@ -15,11 +15,10 @@ var answersB = document.getElementById("answerB");
 var answersC = document.getElementById("answerC");
 var answersD = document.getElementById("answerD");
 var answerCheck = document.getElementById("answer-check");
-var
 //Results container
 var resultsContainer = document.getElementById("quiz-results");
 var finalScore = document.getElementById("final-score");
-var nameField  = document.getElementById("inlineFormInput");
+var scoreName = document.getElementById("inlineFormInput");
 var submitScore = document.getElementById("submit-score");
 //High Score container
 var highScoreContainer = document.getElementById("high-score");
@@ -30,17 +29,20 @@ var clear = document.getElementById("clear-scores");
 // Time 
 var time;
 
-timer.textContent = time;
-
 //Start quiz
-
-start.addEventListener("click",  startTimer());
-
-function startTimer () {
-    time = 75;
-    setInterval(function(){
-        time--;
-    } if (time === 0) {
-        clearInterval(startTimer);
-    }
+function startQuiz() {
+    var timeInterval = setInterval(function () {
+        time = 75;
+        while (time > 0) {
+            time--;
+            timer.textContent = time;
+            if (time === 0) {
+                clearInterval(timeInterval);
+            }
+            return time;
+        } 
+    }, 1000);;
 };
+
+start.addEventListener("click", startQuiz);
+console.log(event);
