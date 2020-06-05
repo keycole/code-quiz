@@ -1,5 +1,6 @@
 //Identify all variables
 var navBar = document.getElementById("navigation-bar");
+var scoreLink = document.getElementById("score-link");
 var timer = document.getElementById("timer");
 //Container variables
 var quizContainer = document.getElementById("quiz-container");
@@ -26,6 +27,7 @@ var userRecord = document.getElementById("user-name");
 var backButton = document.getElementById("back-button");
 var clear = document.getElementById("clear-scores");
 
+
 // Time 
 var time = 10;
 
@@ -34,6 +36,24 @@ questionContainer.style.display = "none";
 answerCheck.style.display = "none";
 resultsContainer.style.display = "none";
 highScoreContainer.style.display = "none";
+
+//View High Scores Link - when clicked, reveal High Scores Screen
+scoreLink.addEventListener("click", function(){
+    highScoreContainer.style.display = "block";
+    quizContainer.style.display = "none";
+    questionContainer.style.display = "none";
+    answerCheck.style.display = "none";
+    resultsContainer.style.display = "none";
+});
+
+//Back to Start Link - from High Scores screen, the Back To Start button reveals the Start Screen
+backButton.addEventListener("click", function(){
+    quizContainer.style.display = "block";
+    questionContainer.style.display = "none";
+    answerCheck.style.display = "none";
+    resultsContainer.style.display = "none";
+    highScoreContainer.style.display = "none";
+});
 
 //Start quiz
 start.addEventListener("click", startQuiz);
@@ -61,5 +81,7 @@ function startQuiz() {
             }
     }, 1000);;
 };
+
+//Quiz Function
 
 
