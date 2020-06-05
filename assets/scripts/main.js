@@ -2,7 +2,7 @@
 var navBar = document.getElementById("navigation-bar");
 var scoreLink = document.getElementById("score-link");
 var timer = document.getElementById("timer");
-//Container variables
+//Start container variables
 var quizContainer = document.getElementById("quiz-container");
 var cardHeader = document.getElementById("header");
 var subHead = document.getElementById("sub-text");
@@ -28,7 +28,7 @@ var backButton = document.getElementById("back-button");
 var clear = document.getElementById("clear-scores");
 
 
-// Time 
+// Time - set in the nav bar
 var time = 10;
 
 //Hide Screens via JS
@@ -38,7 +38,7 @@ resultsContainer.style.display = "none";
 highScoreContainer.style.display = "none";
 
 //View High Scores Link - when clicked, reveal High Scores Screen
-scoreLink.addEventListener("click", function(){
+scoreLink.addEventListener("click", function () {
     highScoreContainer.style.display = "block";
     quizContainer.style.display = "none";
     questionContainer.style.display = "none";
@@ -47,7 +47,7 @@ scoreLink.addEventListener("click", function(){
 });
 
 //Back to Start Link - from High Scores screen, the Back To Start button reveals the Start Screen
-backButton.addEventListener("click", function(){
+backButton.addEventListener("click", function () {
     quizContainer.style.display = "block";
     questionContainer.style.display = "none";
     answerCheck.style.display = "none";
@@ -60,25 +60,25 @@ start.addEventListener("click", startQuiz);
 
 function startQuiz() {
     //Hide Start Screen
-        quizContainer.style.display = "none";
-    
+    quizContainer.style.display = "none";
+
     //Display Quiz
-        questionContainer.style.display = "block";
+    questionContainer.style.display = "block";
 
     //Start Quiz function
-        /*Name of Quiz Function Goes Here*/
-    
+    /*Name of Quiz Function Goes Here*/
+
     var timeInterval = setInterval(function () {
         timer.textContent = time;
         time--;
-            if (time === -1) { //unsure why this needs to be -1, but it is the only way I get to display 1 before clearInterval
-                clearInterval(timeInterval);
-                //Hide Questions Container
-                questionContainer.style.display = "none";
-                //Display Result Screen
-                resultsContainer.style.display = "block";
-                time = 10;
-            }
+        if (time === -1) { //unsure why this needs to be -1, but it is the only way I get to display 1 before clearInterval
+            clearInterval(timeInterval);
+            //Hide Questions Container
+            questionContainer.style.display = "none";
+            //Display Result Screen
+            resultsContainer.style.display = "block";
+            time = 10;
+        }
     }, 1000);;
 };
 
