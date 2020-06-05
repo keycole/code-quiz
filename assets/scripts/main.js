@@ -29,19 +29,37 @@ var clear = document.getElementById("clear-scores");
 // Time 
 var time = 10;
 
+//Hide Screens via JS
+questionContainer.style.display = "none";
+answerCheck.style.display = "none";
+resultsContainer.style.display = "none";
+highScoreContainer.style.display = "none";
+
 //Start quiz
 start.addEventListener("click", startQuiz);
-console.log(event);
 
 function startQuiz() {
+    //Hide Start Screen
+        quizContainer.style.display = "none";
+    
+    //Display Quiz
+        questionContainer.style.display = "block";
+
+    //Start Quiz function
+        /*Name of Quiz Function Goes Here*/
+    
     var timeInterval = setInterval(function () {
         timer.textContent = time;
         time--;
             if (time === -1) { //unsure why this needs to be -1, but it is the only way I get to display 1 before clearInterval
                 clearInterval(timeInterval);
+                //Hide Questions Container
+                questionContainer.style.display = "none";
+                //Display Result Screen
+                resultsContainer.style.display = "block";
                 time = 10;
             }
     }, 1000);;
 };
 
-//Hide start screen
+
